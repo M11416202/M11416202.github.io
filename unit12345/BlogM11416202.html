@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>廟會不只是熱鬧！超級嘉年華 - M11416202</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Noto+Sans+TC:wght@300;400;500;700;900&family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'soft-red': '#FF6B6B',
+                        'cute-yellow': '#FFD93D',
+                        'mint-green': '#6BCB77',
+                        'royal-blue': '#4D96FF',
+                        'clay-bg': '#F7F7F7',
+                        'deep-ink': '#2D3436'
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans TC', 'sans-serif'],
+                        display: ['Outfit', 'Noto Sans TC', 'sans-serif'],
+                        cute: ['ZCOOL KuaiLe', 'Noto Sans TC', 'cursive']
+                    },
+                    animation: {
+                        'float': 'float 3s ease-in-out infinite',
+                        'wiggle': 'wiggle 1s ease-in-out infinite',
+                        'blob': 'blob 7s infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        },
+                        wiggle: {
+                            '0%, 100%': { transform: 'rotate(-3deg)' },
+                            '50%': { transform: 'rotate(3deg)' },
+                        },
+                        blob: {
+                            "0%": { transform: "translate(0px, 0px) scale(1)" },
+                            "33%": { transform: "translate(30px, -50px) scale(1.1)" },
+                            "66%": { transform: "translate(-20px, 20px) scale(0.9)" },
+                            "100%": { transform: "translate(0px, 0px) scale(1)" },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 2rem;
+        }
+        .text-gradient {
+            background: linear-gradient(to right, #FF6B6B, #FFD93D);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .blob-bg {
+            position: fixed;
+            z-index: -1;
+            filter: blur(40px);
+            opacity: 0.4;
+        }
+        body {
+            background-color: #F0F2F5;
+            color: #2D3436;
+            overflow-x: hidden;
+        }
+        .bento-item {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .bento-item:hover {
+            transform: scale(1.02);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 8px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #FF6B6B;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="font-sans">
+
+    <!-- Background Decoration -->
+    <div class="blob-bg top-0 -left-10 w-72 h-72 bg-soft-red rounded-full animate-blob"></div>
+    <div class="blob-bg top-1/2 -right-10 w-80 h-80 bg-royal-blue rounded-full animate-blob delay-700"></div>
+    <div class="blob-bg bottom-0 left-1/4 w-96 h-96 bg-cute-yellow rounded-full animate-blob delay-1000"></div>
+
+    <!-- Navigation Header -->
+    <nav class="sticky top-4 z-50 mx-4 lg:mx-auto max-w-4xl px-6 py-4 glass-card flex justify-between items-center shadow-lg">
+        <div class="flex items-center space-x-2">
+            <div class="w-10 h-10 bg-soft-red rounded-xl flex items-center justify-center animate-wiggle">
+                <span class="text-white font-bold text-xl">🏮</span>
+            </div>
+            <span class="font-display font-black text-xl tracking-tighter text-deep-ink">FESTIVAL BLOG</span>
+        </div>
+        <div class="hidden md:flex space-x-6 font-medium text-gray-600">
+            <span class="text-xs tracking-widest uppercase opacity-50">Student ID: M11416202</span>
+        </div>
+        <div class="bg-deep-ink text-white px-5 py-2 rounded-full text-sm font-bold hover:bg-soft-red transition-colors cursor-pointer">
+            Explore 🥁
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="max-w-6xl mx-auto mt-12 px-4 text-center">
+        <div class="inline-block px-4 py-1.5 mb-6 rounded-full bg-cute-yellow/20 border border-cute-yellow text-soft-red font-bold text-sm tracking-widest uppercase animate-bounce">
+            Taiwanese Culture & Art
+        </div>
+        <h1 class="text-4xl md:text-7xl font-black mb-8 leading-tight tracking-tight text-deep-ink">
+            廟會不只是熱鬧！<br/>
+            <span class="text-gradient">一場在地人情味的超級嘉年華</span>
+        </h1>
+        
+        <!-- Banner Image Container -->
+        <div class="relative group mt-10">
+            <div class="absolute -inset-1 bg-gradient-to-r from-soft-red to-cute-yellow rounded-[2.5rem] blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+            <div class="relative rounded-[2rem] overflow-hidden shadow-2xl border-8 border-white">
+                <img src='https://opal.google/board/blobs/87e9d258-6d85-45a7-a3b1-4bef77335934' alt='廟會視覺Banner' class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700" />
+            </div>
+            <!-- Floating Label -->
+            <div class="absolute -bottom-6 -right-4 md:right-10 glass-card px-8 py-6 shadow-xl animate-float">
+                <p class="text-xs font-bold text-soft-red mb-1">AUTHOR</p>
+                <p class="text-xl font-cute">學號：M11416202</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4 mt-24 mb-32">
+        
+        <!-- Intro Section (Asymmetric) -->
+        <section class="mb-24 flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/3">
+                <div class="relative w-48 h-48 mx-auto">
+                    <div class="absolute inset-0 bg-mint-green rounded-full opacity-20 animate-pulse"></div>
+                    <div class="absolute inset-4 border-4 border-dashed border-mint-green rounded-full animate-spin-slow"></div>
+                    <div class="absolute inset-0 flex items-center justify-center text-6xl">✨</div>
+                </div>
+            </div>
+            <div class="md:w-2/3">
+                <h3 class="font-cute text-3xl mb-6 text-mint-green">那個響徹雲霄的聲音...</h3>
+                <p class="text-xl text-gray-600 leading-relaxed font-light">
+                    如果你曾在台灣的街頭巷尾生活過，你一定對這樣的場景不陌生：遠處傳來震耳欲聾的鼓聲，間隨幾聲清脆的響炮，空氣中瀰漫著濃郁的線香味道，那是夾雜著檀香、中藥材與火藥氣息的獨特薰煙。這不僅僅是一場宗教儀式，更是一場喚醒靈魂深處集體記憶的神祕召喚。
+                </p>
+            </div>
+        </section>
+
+        <!-- Bento Grid Content -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-6 mb-24">
+            
+            <!-- Section 1 -->
+            <div class="md:col-span-8 glass-card p-8 bento-item bg-white/40">
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="text-4xl">🎂</span>
+                    <h2 class="text-2xl font-black text-deep-ink">一、 廟會到底在忙什麼？神明的年度社區巡視</h2>
+                </div>
+                <p class="text-gray-600 mb-6 leading-relaxed">
+                    說穿了，廟會的核心就是「神明的生日趴」。從宗教學的角度來看，這是關於「酬神」與「祈福」的交換契約：感謝神明過去一年的庇佑，並預約下一年的平安。
+                </p>
+                <div class="space-y-4">
+                    <div class="bg-white/80 p-4 rounded-2xl border-l-8 border-soft-red">
+                        <strong class="text-soft-red block mb-1">神轎與遶境</strong>
+                        想像一下，平日坐在神龕上的守護神，今天坐上轎子走出廟門，親自到領土巡視。目的是為了淨化街道、驅除邪祟，讓家家戶戶都能感受神恩。
+                    </div>
+                    <div class="bg-white/80 p-4 rounded-2xl border-l-8 border-royal-blue">
+                        <strong class="text-royal-blue block mb-1">陣頭大匯演</strong>
+                        這是廟會的視覺精華。我們可以把陣頭看作傳統的「偶像表演團體」。分為優美典雅的「文陣」以及威赫莊嚴的「武陣」。
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 2 -->
+            <div class="md:col-span-4 bg-royal-blue rounded-[2rem] p-8 text-white bento-item flex flex-col justify-center">
+                <h2 class="text-2xl font-black mb-4">二、 時空旅行</h2>
+                <p class="text-royal-blue-100 text-sm leading-relaxed opacity-90">
+                    我們今天看到的廟會，其實是經過數百年層次堆疊的文化載體。最早，它是古代的「祭社」活動，是跟著農作節奏呼吸的「農曆生活指南」。當先民渡過黑水溝來到台灣時，廟會變成了凝聚同鄉情誼、慰藉鄉愁的「社交軟體」。
+                </p>
+                <div class="mt-8 text-5xl opacity-40">🕰️</div>
+            </div>
+
+            <!-- Section 3 - Stats Style -->
+            <div class="md:col-span-12 glass-card p-8 bento-item">
+                <h2 class="text-2xl font-black text-deep-ink mb-8 text-center">三、 為什麼現在大家還在夯廟會？活生生的動態博物館</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-mint-green/20 rounded-2xl flex items-center justify-center mx-auto mb-4 text-3xl">🏛️</div>
+                        <h4 class="font-bold mb-2">活生生的博物館</h4>
+                        <p class="text-sm text-gray-500">精湛的木雕、細膩的彩繪、繁複的刺繡工藝，在生活中真實流動。</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-soft-red/20 rounded-2xl flex items-center justify-center mx-auto mb-4 text-3xl">🎫</div>
+                        <h4 class="font-bold mb-2">台灣嘉年華名片</h4>
+                        <p class="text-sm text-gray-500">大甲媽祖遶境被 Discovery 頻道列為世界三大宗教盛事之一。</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-cute-yellow/20 rounded-2xl flex items-center justify-center mx-auto mb-4 text-3xl">❤️</div>
+                        <h4 class="font-bold mb-2">心靈社會安全網</h4>
+                        <p class="text-sm text-gray-500">「大家一起完成一件事」的參與感，發揮了穩定的隱形功能。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 4 - Dark Mode Accent -->
+            <div class="md:col-span-6 bg-deep-ink rounded-[2rem] p-8 text-white bento-item">
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="text-3xl">🥨</span>
+                    <h2 class="text-2xl font-black text-soft-red">四、 誠實豆沙包：熱鬧背後的尷尬</h2>
+                </div>
+                <ul class="space-y-4 text-gray-300 text-sm">
+                    <li class="flex items-start gap-2">
+                        <span class="text-soft-red">●</span> 
+                        <span><strong>環保與寧靜：</strong>PM2.5與噪音是現代鄰居的「創傷」。</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-soft-red">●</span> 
+                        <span><strong>「8+9」文化：</strong>社群媒體的刻板標籤與青少年教育問題。</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-soft-red">●</span> 
+                        <span><strong>交通大考驗：</strong>信仰腳步與上班車潮的平衡。</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Section 5 -->
+            <div class="md:col-span-6 glass-card p-8 bento-item border-4 border-mint-green/30">
+                <h2 class="text-2xl font-black text-deep-ink mb-6 flex items-center gap-2">
+                    五、 廟會 2.0 <span class="text-xs bg-mint-green text-white px-2 py-0.5 rounded-full uppercase tracking-tighter">New Age</span>
+                </h2>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-mint-green/10 p-4 rounded-xl">
+                        <p class="font-bold text-mint-green text-xs mb-1 uppercase">Technology</p>
+                        <p class="text-xs">GPS 追蹤神轎位置與 4K 直播</p>
+                    </div>
+                    <div class="bg-royal-blue/10 p-4 rounded-xl">
+                        <p class="font-bold text-royal-blue text-xs mb-1 uppercase">Eco-Friendly</p>
+                        <p class="text-xs">減香運動與電子禮炮車</p>
+                    </div>
+                    <div class="bg-soft-red/10 p-4 rounded-xl">
+                        <p class="font-bold text-soft-red text-xs mb-1 uppercase">Crossover</p>
+                        <p class="text-xs">陣頭搭配重金屬或現代美學</p>
+                    </div>
+                    <div class="bg-cute-yellow/10 p-4 rounded-xl">
+                        <p class="font-bold text-cute-yellow text-xs mb-1 uppercase">Branding</p>
+                        <p class="text-xs">轉型為具備世界級價值的品牌</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Conclusion -->
+        <article class="relative p-12 glass-card overflow-hidden bg-gradient-to-br from-white to-mint-green/10">
+            <div class="absolute top-0 right-0 p-8 text-8xl opacity-10 pointer-events-none">🏮</div>
+            <h2 class="font-cute text-4xl mb-8 text-deep-ink">結語：下一次，換你走進廟會的風景裡</h2>
+            <div class="prose prose-lg text-gray-600 space-y-6">
+                <p>
+                    廟會是一座文化的橋樑，一端連結著過去的艱辛拓荒，另一端通往創新的未來。它不僅僅是敲鑼打鼓，它是一部記載著台灣人情味、美學發展與社會心理的活史書。
+                </p>
+                <p class="font-medium italic border-l-4 border-soft-red pl-6 py-2">
+                    「在那汗水與硝煙之中，藏著我們這個民族最根本的溫柔。」
+                </p>
+                <p>
+                    下一次，當你聽見門外又響起了震撼的鼓聲，不妨暫時收起抱怨，拿起手機或相機，用一種全新的、審美的眼光，去觀察那一場發生在我們家門口，最熟悉卻也最神祕的文化慶典。
+                </p>
+            </div>
+            
+            <!-- Student Stamp -->
+            <div class="mt-12 pt-8 border-t border-gray-200 flex items-center justify-between">
+                <div>
+                    <p class="text-xs font-bold text-gray-400 uppercase tracking-widest">Documented By</p>
+                    <p class="text-lg font-display font-black">M11416202</p>
+                </div>
+                <div class="bg-soft-red text-white p-4 rounded-full shadow-lg cursor-pointer hover:rotate-12 transition-transform">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                    </svg>
+                </div>
+            </div>
+        </article>
+
+    </main>
+
+    <script>
+        // Subtle scroll animation logic
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.bento-item, section, article').forEach(el => {
+            el.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
