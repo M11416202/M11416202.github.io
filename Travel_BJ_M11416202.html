@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beijing Travel Showcase | M11416202 NTUST EMBA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        premium: {
+                            gold: '#C5A059',
+                            dark: '#1A1A1A',
+                            light: '#F8F9FA',
+                            accent: '#2C3E50'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'Noto Sans TC', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 1.2s ease-out forwards',
+                        'slide-up': 'slideUp 0.8s ease-out forwards',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(30px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #FDFDFD;
+            color: #333;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .text-glow {
+            text-shadow: 0 0 20px rgba(197, 160, 89, 0.2);
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .image-hover {
+            transition: transform 0.6s cubic-bezier(0.33, 1, 0.68, 1);
+        }
+        .image-hover:hover {
+            transform: scale(1.04);
+        }
+        .video-container video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .parallax-bg {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased">
+
+    <!-- Top Navigation Branding -->
+    <header class="w-full py-8 px-6 md:px-12 flex justify-center items-center z-50 relative">
+        <div class="tracking-[0.4em] text-xs md:text-sm font-light text-premium-accent uppercase border-b border-premium-gold/30 pb-2">
+            M11416202 NTUST EMBA 李柏宏
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-[85vh] flex items-center justify-center px-6 overflow-hidden">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-gray-50 via-white to-gray-100 opacity-50 -z-10"></div>
+        <div class="max-w-4xl w-full text-center space-y-8 animate-fade-in">
+            <h1 class="font-serif text-7xl md:text-9xl font-bold text-premium-dark tracking-tighter mb-4">
+                北京 <span class="text-premium-gold italic">Beijing</span>
+            </h1>
+            
+            <!-- Instagram Caption Card -->
+            <div class="glass-card p-8 md:p-12 rounded-2xl shadow-2xl relative group">
+                <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-premium-dark text-white px-4 py-1 text-[10px] tracking-widest uppercase">Editorial</div>
+                <p class="text-lg md:text-xl leading-relaxed text-gray-700 font-light mb-8">
+                    Beijing is a city where time collapses, bridging 600 years of imperial grandeur with the pulse of the underground avant-garde. One moment you are standing in the silent shadow of the Temple of Heaven, tracing the intricate blue-tiled roofs that once connected emperors to the cosmos. The next, you are lost in the industrial maze of the 798 Art District, where rusted factory pipes meet vibrant graffiti and experimental galleries. From the sacred symmetry of the past to the bold brushstrokes of the future—Beijing is a masterpiece of contrast. 🏯🎨🏙️🇨🇳✨
+                </p>
+                <div class="flex flex-wrap justify-center gap-3 mb-8 text-sm text-premium-gold font-medium">
+                    <span>#BeijingTravel</span> <span>#TempleOfHeaven</span> <span>#798ArtDistrict</span> <span>#ModernAncient</span> <span>#ChinaExplore</span>
+                </div>
+                <button onclick="copyCaption()" class="inline-flex items-center gap-2 px-8 py-3 bg-premium-dark text-white rounded-full hover:bg-premium-gold transition-all duration-300 text-sm tracking-widest uppercase group">
+                    <span id="copyText">Copy Caption</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Spot 1: Temple of Heaven -->
+    <section class="py-24 px-6 md:px-12 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+            <!-- Narrative Column -->
+            <div class="lg:col-span-5 order-2 lg:order-1 space-y-6">
+                <div class="inline-block px-4 py-1 border border-premium-gold text-premium-gold text-xs tracking-widest uppercase mb-4">Spot 01</div>
+                <h2 class="font-serif text-4xl md:text-5xl font-bold text-premium-dark leading-tight">
+                    天壇祈年殿 <br/>
+                    <span class="text-2xl font-light italic text-gray-400 block mt-2">The Temple of Heaven</span>
+                </h2>
+                <div class="w-20 h-1 bg-premium-gold mb-8"></div>
+                <p class="text-gray-600 leading-loose text-lg">
+                    這是一幅在黃金時刻捕捉到的祈年殿寬廣低視角畫面。標誌性的三層簷圓形建築擁有深邃的青金石色琉璃瓦，在溫暖的夕陽下閃閃發光，與鮮豔的朱紅色木柱和精緻的金箔細節形成鮮明對比。漢白玉的「丹陛」台基營造出一條明亮且對稱的引導線，直指建築。光影效果戲劇化，投射下長長的陰影，柔和的琥珀色光芒灑在華麗的雕刻上。天空呈現出橙色與靛藍的完美漸層，氛圍莊嚴、寧靜且永恆，展現極致的建築細節與精神規模感。
+                </p>
+            </div>
+
+            <!-- Visual Grid -->
+            <div class="lg:col-span-7 order-1 lg:order-2 space-y-4">
+                <div class="rounded-2xl overflow-hidden shadow-2xl video-container aspect-video relative group">
+                    <video src="https://opal.google/board/blobs/3498e63a-02e3-4c9b-b4c7-db0292a48e4f" autoplay muted loop playsinline class="w-full h-full object-cover"></video>
+                    <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
+                </div>
+                <div class="grid grid-cols-3 gap-4">
+                    <div class="aspect-square rounded-xl overflow-hidden shadow-lg group">
+                        <img src="https://opal.google/board/blobs/26d2790d-c1a8-47f1-acec-7658fec056d1" alt="Temple of Heaven View 1" class="w-full h-full object-cover image-hover">
+                    </div>
+                    <div class="aspect-square rounded-xl overflow-hidden shadow-lg group">
+                        <img src="https://opal.google/board/blobs/5f95a93d-de56-4593-a467-880d5c26afed" alt="Temple of Heaven View 2" class="w-full h-full object-cover image-hover">
+                    </div>
+                    <div class="aspect-square rounded-xl overflow-hidden shadow-lg group">
+                        <img src="https://opal.google/board/blobs/be4722f6-e2e0-4645-8a28-a426ff138a46" alt="Temple of Heaven View 3" class="w-full h-full object-cover image-hover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mid-Page Divider (Visual Break) -->
+    <div class="w-full h-[30vh] bg-premium-light flex items-center justify-center">
+        <div class="h-full w-px bg-gradient-to-b from-transparent via-premium-gold to-transparent opacity-50"></div>
+    </div>
+
+    <!-- Spot 2: 798 Art District -->
+    <section class="py-24 px-6 md:px-12 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+            <!-- Visual Grid (Flipped Layout) -->
+            <div class="lg:col-span-7 space-y-4">
+                <div class="rounded-2xl overflow-hidden shadow-2xl video-container aspect-video relative group">
+                    <video src="https://opal.google/board/blobs/6e7f4190-44eb-498c-ae7c-b068f75a58ef" autoplay muted loop playsinline class="w-full h-full object-cover"></video>
+                    <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
+                </div>
+                <div class="grid grid-cols-3 gap-4">
+                    <div class="aspect-square rounded-xl overflow-hidden shadow-lg group">
+                        <img src="https://opal.google/board/blobs/402a561e-9ddc-4fb3-9248-e6e9a146eb5c" alt="798 Art District View 1" class="w-full h-full object-cover image-hover">
+                    </div>
+                    <div class="aspect-square rounded-xl overflow-hidden shadow-lg group">
+                        <img src="https://opal.google/board/blobs/65d374e8-ad59-4f3c-b471-7995636e8a5e" alt="798 Art District View 2" class="w-full h-full object-cover image-hover">
+                    </div>
+                    <div class="aspect-square rounded-xl overflow-hidden shadow-lg group">
+                        <img src="https://opal.google/board/blobs/525d8e96-34ba-401a-b61d-7edc0b2ce92c" alt="798 Art District View 3" class="w-full h-full object-cover image-hover">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Narrative Column -->
+            <div class="lg:col-span-5 space-y-6">
+                <div class="inline-block px-4 py-1 border border-premium-gold text-premium-gold text-xs tracking-widest uppercase mb-4">Spot 02</div>
+                <h2 class="font-serif text-4xl md:text-5xl font-bold text-premium-dark leading-tight">
+                    798 藝術區 <br/>
+                    <span class="text-2xl font-light italic text-gray-400 block mt-2">Dashanzi Art District</span>
+                </h2>
+                <div class="w-20 h-1 bg-premium-gold mb-8"></div>
+                <p class="text-gray-600 leading-loose text-lg">
+                    這是一個富有電影感、展現「粗獷時尚」美學的 798 藝術區工業巷弄街景。場景包含世紀中葉包浩斯風格的工廠建築，斑駁的紅磚牆、外露的生鏽鐵管和大型架空蒸汽管道。色彩鮮艷的大型當代塗鴉與霓虹燈藝術廊招牌，在粗獷的工業背景下形成強烈對比。前景矗立著一座巨大的金屬前衛雕塑。光影氛圍濃郁，自然陽光穿過高聳的鋸齒狀屋頂窗戶灑下，霓虹粉色與藍色的光點點亮了陰影處。地面是陳舊的混凝土，水窪中倒映著都市藝術，氛圍充滿創意、前衛且高能量。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Simple Minimalist Grounding Footer -->
+    <div class="w-full py-16 px-6 text-center border-t border-gray-100 mt-24">
+        <h3 class="font-serif text-2xl text-premium-dark mb-4">北京影像誌</h3>
+        <p class="text-gray-400 text-xs tracking-[0.3em] uppercase">BEIJING TRAVEL CURATION &copy; 2024</p>
+    </div>
+
+    <script>
+        function copyCaption() {
+            const caption = `Beijing is a city where time collapses, bridging 600 years of imperial grandeur with the pulse of the underground avant-garde. One moment you are standing in the silent shadow of the Temple of Heaven, tracing the intricate blue-tiled roofs that once connected emperors to the cosmos. The next, you are lost in the industrial maze of the 798 Art District, where rusted factory pipes meet vibrant graffiti and experimental galleries. From the sacred symmetry of the past to the bold brushstrokes of the future—Beijing is a masterpiece of contrast. 🏯🎨🏙️🇨🇳✨ #BeijingTravel #TempleOfHeaven #798ArtDistrict #ModernAncient #ChinaExplore`;
+            
+            navigator.clipboard.writeText(caption).then(() => {
+                const btn = document.getElementById('copyText');
+                const originalText = btn.innerText;
+                btn.innerText = 'Copied!';
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                }, 2000);
+            });
+        }
+
+        // Simple intersection observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-slide-up');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.style.opacity = '0'; // Set initial state for animation
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
+
